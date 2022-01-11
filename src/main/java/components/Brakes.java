@@ -5,13 +5,12 @@ public enum Brakes{
     DISC("disc"),
     CARBON("carbon");
 
-    private final String brakes;
+    private String brakes;
 
-    Brakes(String brakes) {
+    private Brakes(String brakes) {
         this.brakes = brakes;
     }
 
-    public String getBrakes() {
-        return brakes;
-    }
+    public String getCustomString(){return brakes;}
+
 }

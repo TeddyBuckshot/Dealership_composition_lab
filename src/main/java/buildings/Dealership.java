@@ -1,10 +1,13 @@
 package buildings;
 
+import behaviours.IBuy;
+import behaviours.ISell;
+import people.Customer;
 import vehicles.Vehicle;
 
 import java.util.ArrayList;
 
-public class Dealership {
+public class Dealership implements IBuy, ISell {
 
 
     private ArrayList<Vehicle> carStock;
@@ -19,10 +22,6 @@ public class Dealership {
         return carStock;
     }
 
-//    public void setCarStock(ArrayList<Vehicle> carStock) {
-//        this.carStock = carStock;
-//    }
-
     public double getTill() {
         return till;
     }
@@ -32,6 +31,17 @@ public class Dealership {
     }
 
     public void buyVehicle(Vehicle vehicle) {
-        this.carStock.add(vehicle);
+        if (this.till > vehicle.getPrice()){
+            this.carStock.add(vehicle);
+            this.till = till - vehicle.getPrice();
+        }
+    }
+
+    public void sellVehicle(Vehicle vehicle, Customer customer) {
+        if (carStock.size() >0){
+            this.till = till + vehicle.getPrice();
+            this.carStock.remove(vehicle);
+            customer.buyVehicle(vehicle);
+        }
     }
 }

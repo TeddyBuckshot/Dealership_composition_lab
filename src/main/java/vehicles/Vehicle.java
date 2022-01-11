@@ -7,13 +7,16 @@ import components.Tyres;
 
 public class Vehicle implements ISelector {
 
+    private String name;
     private int price;
     private String colour;
     private Engine engine;
     private Brakes brakes;
     private Tyres tyres;
+    private double
 
-    public Vehicle(int price, String colour, Engine engine, Brakes brakes, Tyres tyres){
+    public Vehicle(String name, int price, String colour, Engine engine, Brakes brakes, Tyres tyres){
+        this.name = name;
         this.price = price;
         this.colour = colour;
         this.engine = engine;
@@ -41,8 +44,16 @@ public class Vehicle implements ISelector {
         return tyres;
     }
 
-    public String getEnumValue(Vehicle vehicl){
-        return this.engine.getEngineEnum();
+    public String getEngineValue() {
+        return engine.getCustomString();
+    }
+
+    public String getBrakeValue() {
+        return brakes.getCustomString();
+    }
+
+    public String getTyresValue() {
+        return tyres.getCustomString();
     }
 
 }

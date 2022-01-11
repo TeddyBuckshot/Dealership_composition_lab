@@ -14,29 +14,29 @@ public class CarTest {
 
     @Before
     public void before() {
-        car1 = new Car(1000, "yellow", Engine.ICE, Brakes.DISC, Tyres.HARD);
-        car2 = new Car(2000, "black", Engine.ICE, Brakes.CARBON, Tyres.SOFT);
+        car1 = new Car("Honda S2000", 28000, "black", Engine.ICE, Brakes.DISC, Tyres.MEDIUM);
+        car2 = new Car("BMW M3", 38000, "red", Engine.ICE, Brakes.CARBON, Tyres.SOFT);
     }
 
     @Test
     public void hasPrice() {
-        assertEquals(1000, car1.getPrice());
+        assertEquals(28000, car1.getPrice());
     }
     @Test
     public void hasColour() {
-        assertEquals("black", car2.getColour());
+        assertEquals("red", car2.getColour());
     }
     @Test
     public void hasEngine() {
-        assertEquals("combustion", car1.getEngine());
+        assertEquals(Engine.ICE, car1.getEngine());
     }
     @Test
     public void hasBrakes() {
-        assertEquals("carbon", car2.getBrakes());
+        assertEquals(Brakes.CARBON, car2.getBrakes());
     }
     @Test
     public void hasTyres() {
-        assertEquals("soft", car2.getTyres());
+        assertEquals(Tyres.SOFT, car2.getTyres());
     }
 
 }

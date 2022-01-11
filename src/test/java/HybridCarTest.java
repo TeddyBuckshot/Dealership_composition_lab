@@ -13,7 +13,7 @@ public class HybridCarTest {
 
     @Before
     public void before() {
-        hybrid1 = new HybridCar(45000, "brown", Engine.HYBRID, Brakes.DISC, Tyres.MEDIUM);
+        hybrid1 = new HybridCar("Toyota Prius", 45000, "brown", Engine.HYBRID, Brakes.DISC, Tyres.MEDIUM);
     }
 
     @Test
@@ -26,15 +26,15 @@ public class HybridCarTest {
     }
     @Test
     public void hasEngine() {
-        assertEquals("hybrid", hybrid1.getEngine());
+        assertEquals("hybrid", hybrid1.getEngineValue());
     }
     @Test
     public void hasBrakes() {
-        assertEquals("disc", hybrid1.getBrakes());
+        assertEquals("disc", hybrid1.getBrakeValue());
     }
     @Test
     public void hasTyres() {
-        assertEquals("medium", hybrid1.getTyres());
+        assertEquals("medium", hybrid1.getTyresValue());
     }
 
 }

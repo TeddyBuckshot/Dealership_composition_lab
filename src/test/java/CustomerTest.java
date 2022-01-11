@@ -9,8 +9,6 @@ import vehicles.ElectricCar;
 import vehicles.HybridCar;
 import vehicles.Vehicle;
 
-import java.util.ArrayList;
-
 import static org.junit.Assert.assertEquals;
 
 public class CustomerTest {
@@ -19,16 +17,14 @@ public class CustomerTest {
     Vehicle vehicle1;
     Vehicle vehicle2;
     Vehicle vehicle3;
-    ArrayList<Vehicle> currentVehicles;
 
     @Before
     public void before() {
-        vehicle1 = new ElectricCar(80000, "blue", Engine.ELECTRIC, Brakes.DRUM, Tyres.MEDIUM);
-        vehicle2 = new Car(2000, "black", Engine.ICE, Brakes.CARBON, Tyres.SOFT);
-        vehicle3 = new HybridCar(70000, "brown", Engine.HYBRID, Brakes.DISC, Tyres.MEDIUM);
-        currentVehicles = new ArrayList<>();
+        vehicle1 = new ElectricCar("Porsche Taycan",80000, "blue", Engine.ELECTRIC, Brakes.DRUM, Tyres.MEDIUM);
+        vehicle2 = new Car("Honda NSX",2000, "black", Engine.ICE, Brakes.CARBON, Tyres.SOFT);
+        vehicle3 = new HybridCar("McLaren Speedtail", 70000, "brown", Engine.HYBRID, Brakes.DISC, Tyres.MEDIUM);
 
-        customer = new Customer(150000, currentVehicles);
+        customer = new Customer(150000);
     }
 
     @Test

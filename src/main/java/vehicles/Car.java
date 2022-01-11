@@ -6,8 +6,8 @@ import components.Tyres;
 
 public class Car extends Vehicle{
 
-    public Car(int price, String colour, Engine engine, Brakes brakes, Tyres tyres){
-        super(price, colour, engine, brakes, tyres);
+    public Car(String name, int price, String colour, Engine engine, Brakes brakes, Tyres tyres){
+        super(name, price, colour, engine, brakes, tyres);
     }
 
 }

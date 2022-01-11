@@ -11,8 +11,6 @@ public enum Engine{
         this.engine = engine;
     }
 
-    public String getEngineEnum() {
-        return engine;
-    }
+    public String getCustomString(){return engine;}
 
 }

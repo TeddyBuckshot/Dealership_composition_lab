@@ -1,8 +1,9 @@
 package behaviours;
 
+import people.Customer;
 import vehicles.Vehicle;
 
 public interface ISell {
 
-    public Vehicle sellVehicle(Vehicle vehicle);
+    public void sellVehicle(Vehicle vehicle, Customer customer);
 }

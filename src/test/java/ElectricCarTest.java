@@ -14,8 +14,8 @@ public class ElectricCarTest {
 
     @Before
     public void before() {
-        electric1 = new ElectricCar(80000, "blue", Engine.ELECTRIC, Brakes.DRUM, Tyres.HARD);
-        electric2 = new ElectricCar(100000, "red", Engine.ELECTRIC, Brakes.CARBON, Tyres.SOFT);
+        electric1 = new ElectricCar("Audi e-tron", 80000, "blue", Engine.ELECTRIC, Brakes.DRUM, Tyres.HARD);
+        electric2 = new ElectricCar("Tesla model S", 100000, "red", Engine.ELECTRIC, Brakes.CARBON, Tyres.SOFT);
     }
 
     @Test
@@ -30,16 +30,16 @@ public class ElectricCarTest {
 
     @Test
     public void hasEngine() {
-        assertEquals("electric", electric1.getEngine());
+        assertEquals(Engine.ELECTRIC, electric1.getEngine());
     }
 
     @Test
     public void hasBrakes() {
-        assertEquals("drum", electric1.getBrakes());
+        assertEquals(Brakes.DRUM, electric1.getBrakes());
     }
 
     @Test
     public void hasTyres() {
-        assertEquals("soft", electric2.getTyres());
+        assertEquals(Tyres.SOFT, electric2.getTyres());
     }
 }

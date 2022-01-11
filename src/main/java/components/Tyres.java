@@ -11,8 +11,6 @@ public enum Tyres{
         this.tyres = tyres;
     }
 
-    public String getTyres() {
-        return tyres;
-    }
+    public String getCustomString(){return tyres;}
 
 }
